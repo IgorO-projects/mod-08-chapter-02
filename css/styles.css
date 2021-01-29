@@ -1,0 +1,45 @@
+/* io */
+.box {
+    width: 400px;
+    height: 400px;
+    font-size: 128px;
+    text-align: center;
+    line-height: 400px;
+    color: #ffffff;
+}
+.box:not(:last-child) {
+    margin-bottom: 64px;
+}
+.box:nth-child(1) {
+    background-color: #3f51b5;
+}
+.box:nth-child(2) {
+    background-color: #ff5722;
+}
+.box:nth-child(3) {
+    background-color: #00bc;
+}
+.box:nth-child(4) {
+    background-color: #ff4081;
+}
+/* lazy-load */
+
+.feed {
+    list-style: none;
+}
+.feed:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.feed img {
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 500ms linear;
+    width: 640px;
+    height: 480px;
+    object-fit: cover;
+}
+.feed img.appear {
+    transform: translateX(0);
+    opacity: 1;
+}
